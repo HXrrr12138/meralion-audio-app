@@ -17,7 +17,6 @@ Here is the link for the detailed information about the introduction of this mod
 - Ensure **data compliance and contextual retrieval** via patient-centric collections.  
 ---
 
-
 ## 🔧 Backend Implementation
 
 The backend is implemented in **Python** and integrates multiple AI components into a structured workflow:
@@ -52,18 +51,12 @@ The main coding part is in the file **Backend_part.ipynb**
 ---
 
 ## 💻 Frontend Demo (Streamlit)
-The frontend is implemented in **Streamlit** for an interactive demo:
-- **Scenario selection**: Appointment, consultation, or ward round.  
-- **Audio upload & transcription** (simulated with hardcoded text for demo).  
-- **Summary display**: Auto-generated structured reports presented in the UI.  
-- **Patient preview cards** for quick doctor catch-up before ward rounds.  
-- **Export function** to save generated reports into files for sharing.  
+The frontend is implemented in **Streamlit** for an interactive demo. The complete project file and the detailed description can be found in another repository.
 
-👉 [Frontend Demo Code Link](./frontend_streamlit/)  
-
+👉 [Frontend Demo Code Repositoryk](https://github.com/HXrrr12138/Streamlit-demo-app)
 ---
 
-## 📂 Supporting Materials
+## 📂 Other Supporting Slides and Materials
 For detailed design and project context, please refer to:  
 - 📄 [Capstone Project Report](./Capstone_Report.pdf)  
 - 🖼 [Capstone Poster](./Capstone_Poster.pdf)  
