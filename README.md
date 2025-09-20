@@ -60,7 +60,7 @@ To explore how the demo works in detail, including the complete project files an
 
 ## 📂 Other Supporting Slides and Materials
 For detailed design and project context, please refer to:   
-- 🖼 [Capstone Poster](Slides/Project_idea_poster.png)  
+![Capstone Poster](Slides/Project_idea_poster.png)
 
 ---
 
