@@ -59,8 +59,13 @@ To explore how the demo works in detail, including the complete project files an
 ---
 
 ## 📂 Other Supporting Slides and Materials
-For detailed design and project context, please refer to:   
-![Capstone Poster](Slides/Project_idea_poster.png)
+For detailed design and project context, please refer to the pictures and pptx in the **Slides** file.
+
+- A poster to show the whole idea of how this project is constructed
+- A PPT about
+  - the comparison results of the ASR performance of Meralion and H2Ogpte
+  - the basic framework of this project
+  - the workflow of two application scenarios (appointment call + ward round)
 
 ---
 
