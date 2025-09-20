@@ -59,9 +59,8 @@ To explore how the demo works in detail, including the complete project files an
 ---
 
 ## 📂 Other Supporting Slides and Materials
-For detailed design and project context, please refer to:  
-- 📄 [Capstone Project Report](./Capstone_Report.pdf)  
-- 🖼 [Capstone Poster](./Capstone_Poster.pdf)  
+For detailed design and project context, please refer to:   
+- 🖼 [Capstone Poster](.Slides/Project_idea_poster.png)  
 
 ---
 
