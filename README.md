@@ -79,7 +79,7 @@ To explore how the demo works in detail, including the complete project files an
 ---
 
 ## 📂 Other Supporting Slides and Materials
-For detailed design and project context, please refer to the pictures and pptx in the **Slides** file.
+For detailed design and project context, please refer to the pictures and pptx in the [**Slides** file](.Slides).
 
 - A poster to show the whole idea of how this project is constructed
 - A PPT about
