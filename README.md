@@ -67,5 +67,7 @@ For detailed design and project context, please refer to the pictures and pptx i
   - the basic framework of this project
   - the workflow of two application scenarios (appointment call + ward round)
 
+![Framework](Slides/Framework.png)
+
 ---
 
