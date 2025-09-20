@@ -11,73 +11,43 @@ MERaLiON-2-10B is a Speech-Text large language model (AudioLLM) designed to unde
 Here is the link for the detailed information about the introduction of this model and how to import it on Huggingface.
 👉 [Reference Link](https://huggingface.co/MERaLiON/MERaLiON-2-10B)
 
-Structure of Functions
-1️⃣Medical Voice Input
-Applicable Scenarios:
-Phone-based appointment booking / hotline consultation / in-person doctor-patient communication
-
-
-Key Functions:
-
-
-Record voice and upload to the backend
-
-
-Use MERaLiON for Automatic Speech Recognition (ASR)
-
-
-If multiple languages are involved, optionally translate to English for easier downstream processing
-
-
-2️⃣Structured Document Generation
-Extract key information from transcribed text, such as:
-
-
-Time, symptoms, department, doctor’s advice, etc.
-
-
-Automatically generate structured conversation summaries (in Markdown / JSON formats)
-
-
-3️⃣ Personal Knowledge Store
-Bind each patient with a unique ID to automatically create a personal document store
-
-
-Store all transcripts, summaries, and doctor-uploaded formal medical reports into that patient's vector database (used for RAG)
-
-
-4️⃣ Memory-Augmented Q&A
-System recognizes spoken questions → converts to text → searches knowledge base (RAG) → uses LLM to generate an answer
-
-
-If no answer is found locally → fallback to external LLM for response
-
-
-Answers can be converted to voice via TTS, improving accessibility for elderly users
-
-
-LangChain Memory + Retrieval + TTS
-
-
-
-
-It is a multimodal healthcare assistant prototype that combines **Automatic Speech Recognition (ASR)**, **multilingual translation**, and **LLM-powered retrieval & structured reporting**.  
-The project aims to **boost clinical productivity** and **facilitate cross-department collaboration** by converting medical dialogues into structured outputs like **SOAP notes**, **referral letters**, and **patient preview cards**.
-
-Key objectives:
+### ✅ Key objectives:
 - Support **multilingual speech in Singapore context** (English, Singlish, Mandarin, Malay).  
 - Reduce clinicians’ burden on **manual note-taking and summary writing**.  
 - Ensure **data compliance and contextual retrieval** via patient-centric collections.  
 ---
 
-## 🛠 Backend Implementation
-The backend is built in **Python**, using:
-- **MERaLiON ASR** for medical speech transcription.  
-- **H2OGPTE** for large language model processing and RAG-based contextual retrieval.  
-- **Structured output pipeline** to generate SOAP notes, referral letters, and patient summaries.  
-- **Dictionary mapping** between patient IDs and collection IDs to manage case-specific data.  
 
-👉 [Backend Code Link](./backend_code/)  
+## 🔧 Backend Implementation
+
+The backend is implemented in **Python** and integrates multiple AI components into a structured workflow:
+
+### MERaLiON ASR
+- Built on Hugging Face’s `MERaLiON-2-3B` model for robust medical speech transcription.  
+- Supports long audio by splitting into silence-based segments (via `pydub`), then transcribing chunk by chunk for higher accuracy.  
+
+### LangChain + H2OGPTE Integration
+- A custom `H2OGPTE_LLM` wrapper connects H2OGPTE into the LangChain ecosystem.  
+- Multiple `LLMChain` pipelines are defined for translation, date normalization, appointment summaries, bedside consultation summaries, and emotion-based advice generation.  
+
+### Structured Multi-Scenario Pipelines
+- **Appointment Pipeline**: Converts audio into transcript → checks language → translates if needed → standardizes dates → extracts structured JSON (patient info, symptoms, appointment time) → stores in Excel + uploads to patient’s collection.  
+- **Bedside Consultation Pipeline**: Produces structured progress notes (JSON + Word template) and uploads to patient’s collection, with raw transcript stored in parallel.  
+- **SOAP / Pre-briefing Generation**: Summarizes a patient’s collection into SOAP notes or concise pre-briefings for doctors.  
+
+### Patient Data Management
+- Maintains a dictionary mapping between patient IDs (NRIC) and H2OGPTE collection IDs.  
+- Each pipeline automatically uploads generated summaries, transcripts, or Word notes to the correct patient collection for future retrieval.  
+
+### Contextual Q&A with Memory
+- Implements per-patient conversational memory (`ChatMessageHistory`), allowing doctors to ask follow-up questions with continuity.  
+- Includes fallback logic: if retrieval fails, queries are routed to the general LLM.  
+
+### Text-to-Speech (TTS) Extension
+- Integrates with ElevenLabs API to convert LLM-generated answers into natural speech, supporting hands-free review by clinicians.  
+
+👉 [Backend Code Link on Google Drive](https://drive.google.com/drive/folders/1SYw_cn9aqFWKevIoEMMBuXLcryTQUFAM?usp=drive_link)
+The main coding part is in the file **Backend_part.ipynb**
 
 ---
 
