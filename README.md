@@ -51,22 +51,17 @@ The main coding part is in the file **Backend_part.ipynb**
 ---
 
 ## 💻 Frontend Demo (Streamlit)
-The frontend is implemented in **Streamlit** for an interactive demo. The complete project file and the detailed description can be found in another repository.
+The frontend of this project is built with **Streamlit**, providing an interactive interface to showcase the main features of the backend system.  
+To explore how the demo works in detail, including the complete project files and usage instructions, please refer to the dedicated repository below:
 
-👉 [Frontend Demo Code Repositoryk](https://github.com/HXrrr12138/Streamlit-demo-app)
+👉 [Frontend Demo Code Repository](https://github.com/HXrrr12138/Streamlit-demo-app)
+
 ---
 
 ## 📂 Other Supporting Slides and Materials
 For detailed design and project context, please refer to:  
 - 📄 [Capstone Project Report](./Capstone_Report.pdf)  
 - 🖼 [Capstone Poster](./Capstone_Poster.pdf)  
-
----
-
-## 🚀 Key Takeaways
-- Demonstrates the **value of combining ASR + RAG + LLM** for healthcare.  
-- Improves efficiency in **clinical dialogues and reporting workflows**.  
-- Provides a **scalable prototype** for real-world healthcare applications.  
 
 ---
 
