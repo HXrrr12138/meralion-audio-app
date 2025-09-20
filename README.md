@@ -1,5 +1,25 @@
 # A Multimodal GenAI App for Smarter Healthcare with MERaLiON
 
+## 📑 Table of Contents
+- [🔗 Code & Repository Links](#-code--repository-links)
+- [📌 Project Overview](#-project-overview)
+- [🔧 Backend Implementation](#-backend-implementation)
+- [💻 Frontend Demo (Streamlit)](#-frontend-demo-streamlit)
+- [📂 Other Supporting Slides and Materials](#-other-supporting-slides-and-materials)
+
+---
+
+## 🔗 Code & Repository Links
+Here are the main resources for this project:
+
+- 👉 **Backend Implementation (Google Drive, with code in `Backend_part.ipynb`)**  
+  [Backend Code Link](https://drive.google.com/drive/folders/1SYw_cn9aqFWKevIoEMMBuXLcryTQUFAM?usp=drive_link)
+
+- 👉 **Frontend Demo (Streamlit App Repository)**  
+  [Frontend Demo Code Repository](https://github.com/HXrrr12138/Streamlit-demo-app)
+
+---
+
 ## 📌 Project Overview
 
 This project aims to build a multimodal voice-based intelligent assistant system tailored for healthcare scenarios, especially in the local context with multiple languages in Singapore.
